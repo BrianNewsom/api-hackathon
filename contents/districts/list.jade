@@ -1,0 +1,16 @@
+- var districts = (data.count == 1 ? "district" : "districts")
+
+h3= "Results " + "(" +  data.count + " " + districts + " found)"
+
+.row
+    .col-md-3
+        strong= "State"
+    .col-md-3
+        strong= "District"
+
+each item in data.results
+    .row
+        .col-md-3
+            = item.state
+        .col-md-3
+            = item.district
