@@ -1,20 +1,15 @@
-$( "#legislators" ).on( "click", function( event ) {
-    legislators.load()
+$( "#query" ).on( "click", function( event ) {
+    query.load()
 })
 
-$( "#districts" ).on( "click", function( event ) {
-    districts.load()
+$( "#articleComments" ).on( "click", function( event ) {
+    articleComments.load()
 })
 
-$('#documents').on("click", function(event){
-    documents.load()
+$('#articleText').on("click", function(event){
+    articleText.load()
 })
 
-$('#bills').on("click", function(event){
-    bills.load()
+$('#userComments').on("click", function(event){
+    userComments.load()
 })
-
-$('#nominations').on("click", function(event){
-    nominations.load()
-})
-
