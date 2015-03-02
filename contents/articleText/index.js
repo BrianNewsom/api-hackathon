@@ -1,4 +1,4 @@
-var legislators = {
+var articleText = {
 
 
     load: function() {

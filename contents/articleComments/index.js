@@ -1,4 +1,4 @@
-var documents = {
+var articleComments = {
     load: function() {
         /*
 

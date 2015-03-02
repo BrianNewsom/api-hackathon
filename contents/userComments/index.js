@@ -1,4 +1,4 @@
-var bills = {
+var userComments = {
     load: function() {
         alert('todo');
         /*
