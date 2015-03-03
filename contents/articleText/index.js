@@ -15,7 +15,15 @@ var articleText = {
 
     },
 
-    searchByName: function(){
+    searchByName: function(subreddit){
+        $.get('https://enigmatic-basin-9438.herokuapp.com/r/' + subreddit, function(data){
+            var title = data.data.children[0].data.title;
+            $.get('/api-hackathon/articleText/list.jade', function(template){
+                var html = jade.render(template, {title : title});
+                $("#list").html(html);
+            })
+
+        });
         alert('todo');
     }
 
