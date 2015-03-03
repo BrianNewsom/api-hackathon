@@ -18,12 +18,13 @@ var subReddit = {
     searchByName: function(subreddit){
         $.get('https://enigmatic-basin-9438.herokuapp.com/r/' + subreddit, function(data){
             var title = data.data.children[0].data.title;
-            $.get('/api-hackathon/subReddit/list.jade', function(template){
-                var html = jade.render(template, {title : title});
-                $("#list").html(html);
+            $.get("https://enigmatic-basin-9438.herokuapp.com/sentiment/" + title, function(sentiment){
+                var sentiment = sentiment.body
+                $.get('/api-hackathon/subReddit/list.jade', function(template){
+                    var html = jade.render(template, {title : title, sentiment: sentiment});
+                    $("#list").html(html);
+                })
             })
-
         });
     }
-
 }
