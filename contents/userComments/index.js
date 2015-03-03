@@ -11,6 +11,10 @@ var userComments = {
         legislators.searchByChamber('senate')
         */
 
+    },
+
+    searchByName: function() {
+        alert('Todo')
     }
 
 }
