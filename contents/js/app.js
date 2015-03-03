@@ -6,8 +6,8 @@ $( "#articleComments" ).on( "click", function( event ) {
     articleComments.load()
 })
 
-$('#articleText').on("click", function(event){
-    articleText.load()
+$('#subReddit').on("click", function(event){
+    subReddit.load()
 })
 
 $('#userComments').on("click", function(event){
