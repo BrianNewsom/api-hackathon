@@ -2,8 +2,8 @@ $( "#query" ).on( "click", function( event ) {
     query.load()
 })
 
-$( "#articleComments" ).on( "click", function( event ) {
-    articleComments.load()
+$( "#top" ).on( "click", function( event ) {
+    top.load()
 })
 
 $('#subReddit').on("click", function(event){
