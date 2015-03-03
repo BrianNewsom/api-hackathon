@@ -13,8 +13,18 @@ var userComments = {
 
     },
 
-    searchByName: function() {
-        alert('Todo')
+    searchByName: function(username) {
+        $.get('https://enigmatic-basin-9438.herokuapp.com/user/' + username, function(data){
+            console.log(data);
+            var c = data.data.children[0].data.body;
+            $.get("/api-hackathon/userComments/list.jade", function(template){
+                var html = jade.render(template, {comment : c});
+                $("#list").html(html);
+
+            })
+
+
+        });
     }
 
 }
