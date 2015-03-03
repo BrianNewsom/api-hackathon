@@ -11,11 +11,13 @@ var topa = {
     go: function() {
         $.get("https://enigmatic-basin-9438.herokuapp.com/list/top", function(data){
             var topTitle = data.data.children[0].data.title
-            $.get("/api-hackathon/top/list.jade", function(template){
+            $.get("https://enigmatic-basin-9438.herokuapp.com/sentiment/" + topTitle, function(sentiment){
+                $.get("/api-hackathon/top/list.jade", function(template){
 
-                var html = jade.render(template, {title: topTitle})
-                $("#list").html(html);
+                    var html = jade.render(template, {title: topTitle, sentiment: sentiment.body})
+                    $("#list").html(html);
 
+                })
             })
         })
     }
