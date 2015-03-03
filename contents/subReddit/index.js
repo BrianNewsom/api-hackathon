@@ -24,7 +24,6 @@ var subReddit = {
             })
 
         });
-        alert('todo');
     }
 
 }
