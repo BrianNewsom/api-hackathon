@@ -1,0 +1,8 @@
+h5 Search A User By Name
+.row
+    .col-md-8
+        .form-group.form-group-default
+            label Name
+            input#text.form-control(type='text', required='')                
+    .col-md-4                         
+        button.btn.btn-primary(onClick='userComments.searchByName($("#text").val())') Search
