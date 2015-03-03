@@ -6,6 +6,10 @@ var articleComments = {
             $("#ui").html(html)
         })
 
+    },
+
+    searchByName: function() {
+        alert('todo');
     }
 
 }
