@@ -6,6 +6,9 @@ var query = {
             $("#ui").html(html)
         })
 
+    },
+    search : function() {
+        alert('todo');
     }
 
 }
