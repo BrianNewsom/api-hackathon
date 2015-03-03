@@ -3,7 +3,7 @@ $( "#query" ).on( "click", function( event ) {
 })
 
 $( "#top" ).on( "click", function( event ) {
-    top.load()
+    topa.load()
 })
 
 $('#subReddit').on("click", function(event){
