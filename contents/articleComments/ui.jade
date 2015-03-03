@@ -1,17 +1,8 @@
-h5 Search
+h5 Search An Article by Comments
 .row
-    .col-md-12
+    .col-md-8
         .form-group.form-group-default
-            label Title
-            input#title.form-control(type='text', required='')
-
-.row
-    .col-md-12
-        .form-group.form-group-default
-            label Document Type (gao_report/ig_report)
-            input#type.form-control(type='text', required='')
-.row
-    .col-md-3
-    .col-md-3
-        button.btn.btn-primary(onClick='if($("#title").html()) documents.searchByTitle($("#title").val()); else { documents.searchByType($("#type").val());}') Search
-    .col-md-5
+            label Name
+            input#text.form-control(type='text', required='')                
+    .col-md-4                         
+        button.btn.btn-primary(onClick='bills.searchByName($("#text").val())') Search
